@@ -5,10 +5,11 @@ import ServiceCard from "../Components/ServiceCard";
 import icon1 from "../assets/Icons/3d-programming.png";
 import icon2 from "../assets/Icons/3d-modeling.png";
 import icon3 from "../assets/Icons/3d.png";
-import Cards from "../Components/Cards";
-import Expertises from "../Sections/Expertises";
 import OurProjects from "../Components/OurProjects";
 import Projects from "../Components/Projects";
+import Quote from "../Components/Quote";
+import AboutUs from "../Components/AboutUs";
+import Cards from "../Components/Cards";
 
 // ... (imports remain the same)
 
@@ -57,22 +58,23 @@ function Home() {
           iconSrc={icon3}
         />
       </div>
-
-      {/* <div className="Project-section">
-          <Expertises />
-        </div> */}
-
-      {/* <div className="ourTeam mt-10">
-          <h3 className="text-center text-6xl">Meet Our Team</h3>
-          <Cards />
-        </div> */}
-
-      <div className="ourProjectsSvg flex-col flex justify-center items-center mt-10">
+      {/* <div className="ourProjectsSvg flex-col flex justify-center items-center mt-10">
         <OurProjects />
-      </div>
-      <div className="Projects mt-20">
+      </div> */}
+      <div className="Projects h-370 mb-20">
         <Projects />
       </div>
+
+      <div className="AboutUs h-100 flex justify-center items-center">
+        <AboutUs />
+      </div>
+
+      <div className="quote h-70 flex justify-center items-center flex-col mt-10">
+        <Quote />
+      </div>
+
+      
+
     </>
   );
 }

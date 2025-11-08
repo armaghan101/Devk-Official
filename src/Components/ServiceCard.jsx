@@ -13,12 +13,12 @@ const ServiceCard = ({ number, iconSrc, title, description }) => {
     <div className="bg-black text-white p-8 md:p-10 relative overflow-hidden max-w-sm w-full shadow-lg h-105">
       
       {/* 1. Decorative Background Number */}
-      <div className="cardtext absolute top-6 right-8 text-9xl font-bold text-lime-300 z-0">
+      <div className="cardtext absolute top-6 right-8 text-9xl font-bold text-[#4383c0] z-0">
         {number}
       </div>
 
       {/* 2. Decorative Bottom-Left Circle */}
-      <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-lime-300 rounded-full z-0 opacity-80"></div>
+      <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-c bg-[#4383c0] rounded-full z-0 opacity-80"></div>
 
       {/* 3. Main Content (positioned above decorations) */}
       <div className="relative z-10 flex flex-col h-full">
