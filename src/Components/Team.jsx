@@ -5,26 +5,27 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+
 import kashan from "../assets/devk assets/kashan2.png";
 import armaghan from "../assets/devk assets/armaghan.jpg";
-import farhan from '../assets/devk assets/farhan.avif'
+import farhan from "../assets/devk assets/farhan.avif";
 
 const team = [
   { name: "Ava Green", role: "UI/UX Designer", img: kashan },
   { name: "Armaghan Sajid", role: "Frontend Engineer", img: armaghan },
   { name: "Kashan Afzal", role: "Founder", img: kashan },
   { name: "Farhan", role: "Frontend Engineer", img: farhan },
-  { name: "Mia Johnson", role: "Marketing Lead", img: kashan }
+  { name: "Mia Johnson", role: "Marketing Lead", img: kashan },
 ];
 
 export default function Team() {
   return (
-    <div className="w-full min-h-screen flex items-center justify-center">
-      <div className="w-full max-w-7xl py-20 px-15">
+    <div className="w-full py-16 bg-white">
+      <div className="max-w-7xl px-4 sm:px-6 lg:px-10 mx-auto">
 
-        {/* section text */}
-        <div className="text-center mb-14">
-          <h2 className="text-4xl md:text-5xl font-semibold text-[#2d2b2a]">
+        {/* Section Title */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#2d2b2a]">
             Meet the Team
           </h2>
           <p className="text-[#7a7876] text-sm mt-2">
@@ -34,12 +35,11 @@ export default function Team() {
 
         <Swiper
           modules={[EffectCoverflow, Pagination, Navigation]}
-          initialSlide={1}
           effect="coverflow"
           grabCursor={true}
-          centeredSlides={false}
-          slidesPerView={3}
-          spaceBetween={48}
+          centeredSlides={true}
+          slidesPerView="auto"
+          spaceBetween={20}
           coverflowEffect={{
             rotate: 12,
             depth: 110,
@@ -48,26 +48,28 @@ export default function Team() {
           }}
           pagination={{ clickable: true }}
           navigation={true}
-          className="team-swiper"
+          className="pb-10"
           breakpoints={{
-            0: { slidesPerView: 1.2, spaceBetween: 14 },
-            640: { slidesPerView: 1.6, spaceBetween: 22 },
-            1024: { slidesPerView: 3, spaceBetween: 48 },
+            0: { spaceBetween: 14 },
+            640: { spaceBetween: 22 },
+            1024: { spaceBetween: 48 },
           }}
         >
           {team.map((person, idx) => (
-            <SwiperSlide key={idx}>
-              <div className="w-full h-[520px] bg-white rounded-3xl overflow-hidden shadow-md 
+            <SwiperSlide key={idx} className="!w-[240px] sm:!w-[280px] md:!w-[320px]">
+              <div className="w-full bg-white rounded-3xl overflow-hidden shadow-md 
                 transition-transform duration-500 hover:scale-[1.04] hover:shadow-xl border border-[#e6ded7]">
 
-                <img
-                  src={person.img}
-                  alt={person.name}
-                  className="w-full h-[80%] object-cover"
-                />
+                <div className="w-full h-64 sm:h-72 md:h-80 overflow-hidden">
+                  <img
+                    src={person.img}
+                    alt={person.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
 
                 <div className="px-5 py-4 text-center">
-                  <h3 className="text-xl font-semibold text-[#3b3735]">
+                  <h3 className="text-lg sm:text-xl font-semibold text-[#3b3735]">
                     {person.name}
                   </h3>
                   <p className="text-sm text-[#9a9491] mt-1">
@@ -79,6 +81,7 @@ export default function Team() {
             </SwiperSlide>
           ))}
         </Swiper>
+
       </div>
     </div>
   );
