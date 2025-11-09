@@ -79,6 +79,7 @@ function Home() {
       </section>
       
       <section className="">
+        <h3 className="text-center text-5xl">What Our Client Says</h3>
         <Testimonials />
       </section>
 
