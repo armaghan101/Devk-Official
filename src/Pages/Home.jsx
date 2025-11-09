@@ -9,9 +9,9 @@ import OurProjects from "../Components/OurProjects";
 import Projects from "../Components/Projects";
 import Quote from "../Components/Quote";
 import AboutUs from "../Components/AboutUs";
-import Cards from "../Components/Cards";
-
-// ... (imports remain the same)
+import Team from "../Components/Team";
+import Testimonials from "../Components/Testimonials";
+import Footer from "../Components/Footer";
 
 function Home() {
   return (
@@ -19,62 +19,72 @@ function Home() {
       <Hero />
       <Brands />
 
-      {/* IMPROVED SERVICES SECTION */}
-      <div className="services flex flex-col items-center mt-12 px-4 md:px-8">
-        <div className="heading max-w-4xl text-center">
-          <h2 className="text-center text-4xl font-semibold leading-8 text-gray-600 tracking-wide uppercase">
+      {/* SERVICES SECTION */}
+      <section className="flex flex-col items-center mt-20 px-4 md:px-8">
+        <div className="max-w-4xl text-center">
+          <h2 className="text-4xl font-semibold text-gray-700 tracking-wide uppercase">
             Our Services
           </h2>
-          <h3 className="text-[16px] font-normal mt-4 text-gray-600 md:text-lg">
+
+          <p className="text-[16px] md:text-lg font-normal mt-4 text-gray-600 leading-relaxed">
             Every brand has a story—it just needs the right platform to dominate
             the digital landscape. At <b>DevK</b>, we are the architects of that
             platform, transforming ambitious ideas into captivating, high-growth
-            digital experiences. From crafting stunning websites and powerful
-            branding to delivering strategic marketing campaigns, we build
-            solutions that don't just make an impact—they drive results. <br />
-            <br />
+            digital experiences.
+            <br /><br />
             Ready to amplify your vision?
-          </h3>
+          </p>
         </div>
-      </div>
 
-      <div className="servicecards flex justify-center items-center gap-5 mt-10">
-        <ServiceCard
-          title="Website Development"
-          number="1"
-          description="At DevK, we craft stunning, user-friendly websites that blend design and functionality, turning ideas into powerful digital experiences"
-          iconSrc={icon1}
-        />
-        <ServiceCard
-          title="Graphic Design"
-          number="2"
-          description="At DevK, we craft stunning, user-friendly websites that blend design and functionality, turning ideas into powerful digital experiences"
-          iconSrc={icon2}
-        />
-        <ServiceCard
-          title="UI UX"
-          number="3"
-          description="At DevK, we craft stunning, user-friendly websites that blend design and functionality, turning ideas into powerful digital experiences"
-          iconSrc={icon3}
-        />
-      </div>
-      {/* <div className="ourProjectsSvg flex-col flex justify-center items-center mt-10">
-        <OurProjects />
-      </div> */}
-      <div className="Projects h-370 mb-20">
+        <div className="flex flex-wrap justify-center items-center gap-8 mt-14 mb-20">
+          <ServiceCard
+            title="Website Development"
+            number="1"
+            description="We build high-performing, responsive, and visually captivating websites that create impact."
+            iconSrc={icon1}
+          />
+          <ServiceCard
+            title="Graphic Design"
+            number="2"
+            description="We craft stunning brand identities, visuals, and creative assets that speak to your audience."
+            iconSrc={icon2}
+          />
+          <ServiceCard
+            title="UI UX"
+            number="3"
+            description="We design smooth, meaningful, and delightful user experiences that keep users engaged."
+            iconSrc={icon3}
+          />
+        </div>
+      </section>
+
+      {/* PROJECTS */}
+      <section className="">
         <Projects />
-      </div>
+      </section>
 
-      <div className="AboutUs h-100 flex justify-center items-center">
+      {/* ABOUT US */}
+      <section className=" flex justify-center">
         <AboutUs />
-      </div>
+      </section>
 
-      <div className="quote h-70 flex justify-center items-center flex-col mt-10">
+      {/* QUOTE */}
+      <section className="flex justify-center">
         <Quote />
-      </div>
+      </section>
 
+      {/* TEAM */}
+      <section className="">
+        <Team />
+      </section>
       
+      <section className="">
+        <Testimonials />
+      </section>
 
+      <section className="mt-10">
+        <Footer />
+      </section>
     </>
   );
 }

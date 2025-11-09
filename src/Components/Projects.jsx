@@ -5,7 +5,7 @@ import p1 from "../assets/devk assets/p1.png"; // Assuming p1 is a generic proje
 function Projects() {
   return (
     // 🌐 Main Container: Center the content and add vertical padding
-    <section className=" sm:py-24">
+    <section className=" sm:py-15 ">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         
         {/* 🏆 Section Header: Clear, bold introduction to the projects */}
