@@ -22,15 +22,17 @@ export default function Team() {
   return (
     <div className="w-full py-16 bg-white">
       <div className="max-w-7xl px-4 sm:px-6 lg:px-10 mx-auto">
-
         {/* Section Title */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#2d2b2a]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#2d2b2a] tracking-wide uppercase">
             Meet the Team
           </h2>
-          <p className="text-[#7a7876] text-sm mt-2">
+          <p className="text-[#7a7876] text-sm sm:text-base mt-2">
             Creative minds working together
           </p>
+
+          {/* Accent underline */}
+          <div className="w-16 h-1 bg-[#2d2b2a] mx-auto mt-3 rounded"></div>
         </div>
 
         <Swiper
@@ -39,6 +41,7 @@ export default function Team() {
           grabCursor={true}
           centeredSlides={true}
           slidesPerView="auto"
+          initialSlide={2}
           spaceBetween={20}
           coverflowEffect={{
             rotate: 12,
@@ -56,10 +59,14 @@ export default function Team() {
           }}
         >
           {team.map((person, idx) => (
-            <SwiperSlide key={idx} className="!w-[240px] sm:!w-[280px] md:!w-[320px]">
-              <div className="w-full bg-white rounded-3xl overflow-hidden shadow-md 
-                transition-transform duration-500 hover:scale-[1.04] hover:shadow-xl border border-[#e6ded7]">
-
+            <SwiperSlide
+              key={idx}
+              className="w-60! sm:w-[280px]! md:w-[320px]!"
+            >
+              <div
+                className="w-full bg-white rounded-3xl overflow-hidden shadow-md 
+                transition-transform duration-500 hover:scale-[1.04] hover:shadow-xl border border-[#e6ded7]"
+              >
                 <div className="w-full h-64 sm:h-72 md:h-80 overflow-hidden">
                   <img
                     src={person.img}
@@ -72,16 +79,12 @@ export default function Team() {
                   <h3 className="text-lg sm:text-xl font-semibold text-[#3b3735]">
                     {person.name}
                   </h3>
-                  <p className="text-sm text-[#9a9491] mt-1">
-                    {person.role}
-                  </p>
+                  <p className="text-sm text-[#9a9491] mt-1">{person.role}</p>
                 </div>
-
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-
       </div>
     </div>
   );

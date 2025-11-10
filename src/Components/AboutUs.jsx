@@ -1,15 +1,40 @@
 import React from 'react'
 import kashan from '../assets/devk assets/kashan2.png' // Assuming 'kashan' is the correct image for your content
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function AboutUs() {
+  useGSAP(() => {
+    gsap.from(".ab-text h2,.ab-text p,.ab-text .ab-span", {
+      x: 300,
+      duration: 2,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".about",
+        start: "top 50%", 
+        end: "bottom 20%",
+      },
+    });
+    gsap.from(".ab-img", {
+      x: -300,
+      duration: 1,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".about",
+        start: "top 50%", 
+        end: "bottom 20%",
+      },
+    });
+  });
   return (
     // 🎨 Added a light background section to make it stand out
-    <section className=" py-20 sm:py-24">
+    <section className="about py-20 sm:py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-16">
           
           {/* 🖼️ Image Wrapper - Increased size and added a distinctive border/shadow */}
-          <div className="w-full lg:w-1/3 relative group">
+          <div className="ab-img w-full lg:w-1/3 relative group">
             {/* Background shape for visual depth */}
             <div className="absolute inset-0 bg-indigo-200 transform translate-x-3 translate-y-3 rounded-3xl opacity-60 group-hover:translate-x-2 group-hover:translate-y-2 transition duration-300 hidden md:block"></div>
             
@@ -21,9 +46,9 @@ function AboutUs() {
           </div>
 
           {/* 📝 Text Content - More spacing and emphasis on the title */}
-          <div className="lg:w-2/3 space-y-8 lg:pr-12">
+          <div className="ab-text lg:w-2/3 space-y-8 lg:pr-12">
             
-            <span className="text-sm font-medium uppercase tracking-widest text-[#4383c0]">
+            <span className="ab-span inline-block text-sm font-medium uppercase tracking-widest text-[#4383c0]">
               Our Mission
             </span>
             

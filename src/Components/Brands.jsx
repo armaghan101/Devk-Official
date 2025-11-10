@@ -4,6 +4,9 @@ import b2 from '../assets/Logos/facebook-1-logo-png-transparent.png'
 import b3 from '../assets/Logos/Fiverr-Logo-2020-present.png'
 import b4 from '../assets/Logos/Shopify_logo_2018.svg.png'
 import b5 from '../assets/Logos/Upwork-Logo-1.png'
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const brandLogos = [
   { src: b1, alt: 'Amazon' },
@@ -14,6 +17,26 @@ const brandLogos = [
 ];
 
 function Brands() {
+  useGSAP(() => {
+    gsap.from(".brands h2", {
+      y: 100,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".brands",
+        start: "top 90%", 
+        end: "bottom 20%",
+      },
+    });
+    gsap.from(".marquee-container", {
+      y: 100,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".brands",
+        start: "top 78%", 
+        end: "bottom 20%",
+      },
+    });
+  });
   return (
     <>
       <style>
@@ -54,7 +77,7 @@ function Brands() {
         `}
       </style>
 
-      <div className="w-full bg-white py-10 overflow-hidden">
+      <div className="brands w-full bg-white py-10 overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
           <h2 className="text-center text-base font-semibold leading-8 text-gray-600 uppercase tracking-wide">
