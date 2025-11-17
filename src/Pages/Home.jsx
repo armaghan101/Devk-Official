@@ -9,6 +9,7 @@ import Team from "../Components/Team";
 import Testimonials from "../Components/Testimonials";
 import Footer from "../Components/Footer";
 import OurServices from '../Components/OurServices'
+import ContactForm from "../Components/ContactForm";
 function Home() {
   return (
     <>
@@ -50,7 +51,11 @@ function Home() {
         <Testimonials />
       </section>
 
-      <section className="mt-10">
+      <section className="Contact">
+        <ContactForm />
+      </section>
+
+      <section className="footer">
         <Footer />
       </section>
     </>

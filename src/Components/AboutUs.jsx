@@ -1,32 +1,30 @@
 import React from 'react'
 import kashan from '../assets/devk assets/kashan2.png' // Assuming 'kashan' is the correct image for your content
-// import gsap from "gsap";
-// import { useGSAP } from "@gsap/react";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function AboutUs() {
-  // useGSAP(() => {
-  //   gsap.from(".ab-text h2,.ab-text p,.ab-text .ab-span", {
-  //     x: 300,
-  //     duration: 2,
-  //     opacity: 0,
-  //     scrollTrigger: {
-  //       trigger: ".about",
-  //       start: "top 50%", 
-  //       end: "bottom 20%",
-  //     },
-  //   });
-  //   gsap.from(".ab-img", {
-  //     x: -300,
-  //     duration: 1,
-  //     opacity: 0,
-  //     scrollTrigger: {
-  //       trigger: ".about",
-  //       start: "top 50%", 
-  //       end: "bottom 20%",
-  //     },
-  //   });
-  // });
+  useGSAP(() => {
+    gsap.from(".ab-text h2,.ab-text p,.ab-text .ab-span", {
+      duration: 2,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".about",
+        start: "top 50%", 
+        end: "bottom 20%",
+      },
+    });
+    gsap.from(".ab-img", {
+      duration: 1,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".about",
+        start: "top 50%", 
+        end: "bottom 20%",
+      },
+    });
+  });
   return (
     // 🎨 Added a light background section to make it stand out
     <section className="about py-20 sm:py-24">

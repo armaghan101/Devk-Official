@@ -2,7 +2,7 @@ import React from "react";
 
 function Quote() {
   return (
-    <div className="flex flex-col items-center justify-center px-4 sm:px-8 py-12 bg-gray-900 rounded-xl shadow-2xl max-w-4xl mx-5 my-12">
+    <div className="flex flex-col items-center justify-center px-4 sm:px-8 py-12 bg-linear-to-br from-[#050A30] via-[#002B7A] to-[#0A84FF] rounded-xl shadow-2xl max-w-4xl mx-5 my-12">
       
       {/* Quote Text */}
       <blockquote className="relative text-center w-full lg:w-[80%] mb-6">

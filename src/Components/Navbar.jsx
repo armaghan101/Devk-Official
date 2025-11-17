@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className="flex justify-between items-center h-20 w-[80vw] sm:w-[70vw] md:w-[85vw] bg-white m-auto rounded-full px-6 md:px-10 text-black shadow-md">
       {/* Logo */}
@@ -17,7 +17,6 @@ function Navbar() {
         <li className="cursor-pointer hover:text-purple-600">Home</li>
         <li className="cursor-pointer hover:text-purple-600">Services</li>
         <li className="cursor-pointer hover:text-purple-600">About Us</li>
-        <li className="cursor-pointer hover:text-purple-600">Contact Us</li>
       </ul>
 
       {/* Desktop Button */}
@@ -42,7 +41,6 @@ function Navbar() {
             <li className="cursor-pointer hover:text-purple-600">Home</li>
             <li className="cursor-pointer hover:text-purple-600">Services</li>
             <li className="cursor-pointer hover:text-purple-600">About Us</li>
-            <li className="cursor-pointer hover:text-purple-600">Contact Us</li>
           </ul>
           <div className="h-10 px-5 bg-black text-white flex justify-center items-center rounded-full text-sm cursor-pointer hover:bg-purple-600 transition-all">
             <button>Get In Touch</button>
@@ -50,7 +48,7 @@ function Navbar() {
         </div>
       )}
     </nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

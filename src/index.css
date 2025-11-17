@@ -28,5 +28,17 @@
   animation: fadeUp 0.8s ease-out forwards;
 }
 
+/* Ensure the Swiper container allows overflow for hover effects */
+.my-custom-swiper.swiper {
+  overflow: visible; /* Allows content to extend beyond the padded box */
+  padding-top: 10px; /* Add some padding to prevent the lifted card from being clipped by the top of its parent */
+  padding-bottom: 10px; /* Add padding for pagination dots if they are too close */
+}
+
+/* Ensure the swiper-wrapper itself also allows content to be visible */
+.my-custom-swiper .swiper-wrapper {
+  overflow: visible;
+}
+
 
 

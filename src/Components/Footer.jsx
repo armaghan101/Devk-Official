@@ -1,74 +1,63 @@
 import React from 'react';
-import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white pt-12 pb-6 border-t border-indigo-900">
+    <footer className="bg-linear-to-br from-[#050A30] via-[#002B7A] to-[#0A84FF] text-white pt-12 pb-6 border-t border-indigo-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Main Content: Links and Info */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+
+        {/* Main Content */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           
-          {/* 1. Logo & Tagline */}
+          {/* Logo */}
           <div>
-            <h3 className="text-2xl font-bold text-indigo-400 mb-4">DevK</h3>
-            <p className="text-gray-400 text-sm">
+            <h3 className="text-2xl font-bold text-indigo-300 mb-4">DevK</h3>
+            <p className="text-gray-200 text-sm max-w-xs">
               Crafting modern, high-performance web experiences.
             </p>
           </div>
 
-          {/* 2. Quick Links */}
+          {/* Contact Info Column */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-gray-400 hover:text-indigo-400 transition duration-300">Home</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-indigo-400 transition duration-300">Services</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-indigo-400 transition duration-300">About Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-indigo-400 transition duration-300">Contact Us</a></li>
+            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
+            <ul className="text-indigo-200 space-y-2 text-sm">
+              <li>📍 Mian khel Bazar</li>
+              <li>📞 +92 313 9614220</li>
+              <li>✉️ kashandevksystem@gmail.com</li>
+              <li>⏰ Mon - Sun: 9:00 AM - 6:00 PM</li>
             </ul>
           </div>
 
-          {/* 3. Resources */}
+          {/* Social Icons */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Resources</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-gray-400 hover:text-indigo-400 transition duration-300">Blog</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-indigo-400 transition duration-300">FAQ</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-indigo-400 transition duration-300">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-indigo-400 transition duration-300">Terms of Service</a></li>
-            </ul>
-          </div>
-
-          {/* 4. Contact & Social */}
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>
-            <div className="flex space-x-4">
-              <a href="mailto:info@devk.com" aria-label="Email" className="text-gray-400 hover:text-indigo-400 transition duration-300">
+            <h4 className="text-lg font-semibold mb-4">Connect</h4>
+            <div className="flex space-x-5">
+              <a href="mailto:kashandevksystem@gmail.com" className="text-indigo-200 hover:text-white transition">
                 <FaEnvelope className="w-6 h-6" />
               </a>
-              <a href="#" aria-label="Twitter" className="text-gray-400 hover:text-indigo-400 transition duration-300">
-                <FaTwitter className="w-6 h-6" />
+              <a href="https://wa.me/+923139614220" className="text-indigo-200 hover:text-white transition">
+                <FaWhatsapp className="w-6 h-6" />
               </a>
-              <a href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-indigo-400 transition duration-300">
+              <a href="https://www.linkedin.com/company/devk-system/posts/?feedView=all" className="text-indigo-200 hover:text-white transition">
                 <FaLinkedin className="w-6 h-6" />
               </a>
-              <a href="#" aria-label="GitHub" className="text-gray-400 hover:text-indigo-400 transition duration-300">
+              <a href="https://github.com/kashanafzl" className="text-indigo-200 hover:text-white transition">
                 <FaGithub className="w-6 h-6" />
               </a>
             </div>
           </div>
+
         </div>
-        
-        {/* Separator Line */}
-        <hr className="my-8 border-gray-700" />
-        
-        {/* Copyright Bar */}
+
+        <hr className="my-8 border-indigo-500/40" />
+
+        {/* Copyright */}
         <div className="flex justify-center items-center">
-          <p className="text-sm text-gray-500">
-            &copy; {new Date().getFullYear()} **DevK**. All Rights Reserved.
+          <p className="text-sm text-indigo-200">
+            &copy; {new Date().getFullYear()} <strong>DevK</strong>. All Rights Reserved.
           </p>
         </div>
-        
+
       </div>
     </footer>
   );

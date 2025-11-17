@@ -1,6 +1,8 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import p1 from "../assets/devk assets/p1.png"; // Assuming p1 is a generic project image
+import p2 from "../assets/devk assets/p2.png"; // Assuming p1 is a generic project image
+import p3 from "../assets/devk assets/p3.png"; // Assuming p1 is a generic project image
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -49,7 +51,7 @@ function Projects() {
         <div className="projects space-y-16">
           <ProjectCard
             img={p1}
-            title="Project Nexus Dashboard" // Using the new 'title' prop
+            title="Collab Ways" // Using the new 'title' prop
             description="This project involved building a highly responsive administrative dashboard using modern component architecture. Key features include real-time data visualization, user management modules, and integrated analytics. The focus was on scalability and an intuitive user experience across all devices." // Using 'description' prop
             fw1="React"
             fw2="Tailwind"
@@ -58,7 +60,7 @@ function Projects() {
 
           <ProjectCard
             reverse
-            img={p1}
+            img={p2}
             title="E-Commerce API & Frontend" // Example title
             description="A complete headless commerce solution, featuring a robust Node.js/Express API backend and a blazing-fast front-end. We optimized the checkout flow and implemented secure payment gateways, resulting in a 30% reduction in cart abandonment."
             fw1="Node.js"
@@ -67,7 +69,7 @@ function Projects() {
           />
 
           <ProjectCard
-            img={p1}
+            img={p3}
             title="Mobile First Marketing Site" // Example title
             description="Designed and developed a sleek marketing site with a primary emphasis on mobile performance. The site scores 98+ on Google PageSpeed Insights and uses advanced CSS techniques for smooth, engaging animations and transitions."
             fw1="Next.js"
