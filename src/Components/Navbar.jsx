@@ -16,6 +16,8 @@ function Navbar() {
       <ul className="hidden md:flex justify-center items-center gap-10 font-medium">
         <li className="cursor-pointer hover:text-purple-600">Home</li>
         <li className="cursor-pointer hover:text-purple-600">Services</li>
+        <li className="cursor-pointer hover:text-purple-600">Projects</li>
+        <li className="cursor-pointer hover:text-purple-600">Team</li>
         <li className="cursor-pointer hover:text-purple-600">About Us</li>
       </ul>
 
@@ -40,6 +42,8 @@ function Navbar() {
           <ul className="flex flex-col items-center gap-6 text-lg font-medium">
             <li className="cursor-pointer hover:text-purple-600">Home</li>
             <li className="cursor-pointer hover:text-purple-600">Services</li>
+            <li className="cursor-pointer hover:text-purple-600">Projects</li>
+            <li className="cursor-pointer hover:text-purple-600">Team</li>
             <li className="cursor-pointer hover:text-purple-600">About Us</li>
           </ul>
           <div className="h-10 px-5 bg-black text-white flex justify-center items-center rounded-full text-sm cursor-pointer hover:bg-purple-600 transition-all">

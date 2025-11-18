@@ -18,6 +18,10 @@ const team = [
   { name: "Mia Johnson", role: "Marketing Lead", img: kashan },
 ];
 
+// --- CHANGE HERE ---
+// Duplicate the array to ensure Swiper's loop has enough slides
+const loopedTeam = [...team, ...team];
+
 export default function Team() {
   return (
     <div className="w-full py-16 bg-white">
@@ -41,8 +45,9 @@ export default function Team() {
           grabCursor={true}
           centeredSlides={true}
           slidesPerView="auto"
-          initialSlide={2}
+          initialSlide={2} // You might want to set this to 5 to start on the "second" set
           spaceBetween={20}
+          loop={true} // This was already correct!
           coverflowEffect={{
             rotate: 12,
             depth: 110,
@@ -58,9 +63,11 @@ export default function Team() {
             1024: { spaceBetween: 48 },
           }}
         >
-          {team.map((person, idx) => (
+          {/* --- CHANGE HERE --- */}
+          {/* Map over the new 'loopedTeam' array */}
+          {loopedTeam.map((person, idx) => (
             <SwiperSlide
-              key={idx}
+              key={idx} // Using index is fine for a static list
               className="w-60! sm:w-[280px]! md:w-[320px]!"
             >
               <div

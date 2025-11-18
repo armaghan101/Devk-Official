@@ -12,7 +12,7 @@ function Hero() {
       transform: "translateY(-100%)",
       duration: 2,
       delay: 1,
-      stagger: 0.1,
+      stagger: 2,
     });
   });
   const heroStyle = {
@@ -41,15 +41,15 @@ function Hero() {
           </div>
           <div className="experience flex justify-center items-center gap-10 mt-30 text-white lg:text-xl">
             <div className="websites text-center">
-              <CountUp start={0} end={50} duration={5} delay={1.5} suffix=" + " />
+              <CountUp start={0} end={50} duration={5} delay={2} suffix=" + " />
               <h3>Websites Built</h3>
             </div>
             <div className="websites text-center">
-              <CountUp start={0} end={4} duration={5} delay={1.5} suffix=" Years" />
+              <CountUp start={0} end={4} duration={5} delay={2} suffix=" Years" />
               <h3>Experience</h3>
             </div>
             <div className="websites text-center">
-              <CountUp start={0} end={30} duration={5} delay={1.5} suffix=" + " />
+              <CountUp start={0} end={30} duration={5} delay={2} suffix=" + " />
               <h3>5 Stars Reviews</h3>
             </div>
           </div>
